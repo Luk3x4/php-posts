@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+html,body{
+    background: #323232;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.login{
+    box-shadow: 0 0 10px 3px rgb(73, 149, 236);
+    border-radius: 15px;
+    width: 500px;
+    /* height: 300px; */
+    padding-bottom: 20px;
+    background: #fff;
+    animation: fade-in 1.5s;
+}
+
+@keyframes fade-in{
+    from{
+        transform: translateX(-100px);
+        opacity: 0
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+h2{
+    text-align: center;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+}
+
+[type="text"], [type="email"], [type="password"]{
+    width: 20em;
+    height: 30px;
+    margin: 5px;
+    outline: none;
+    border: 0;
+    font-size: 20px;
+    padding-left: 5px;
+    border-bottom: 1px solid rgb(165, 165, 165);
+    transition: .5s 
+}
+
+[type="email"]:hover, [type="password"]:hover, [type="text"]:hover{
+    border-bottom: 1px solid #323232;
+}
+
+[type="email"]:focus, [type="password"]:focus, [type="text"]:focus{
+    border-bottom: 1.5px solid rgb(7, 118, 245);
+}
+
+[type="password"]:hover ~ span, [type="password"]:focus ~ span, span:hover{
+    color: #323232;
+}
+[type="submit"]{
+    display: block;
+    margin: 5px auto;
+    background: rgb(7, 118, 245);
+    width:  100px;
+    height: 30px;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+    border: 0;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+[type="submit"]:hover{
+    background: rgb(73, 149, 236);
+}
+
+.username{
+    display: table-cell;
+}
+
+a{
+    margin-top: 15px;
+    color: rgb(7, 118, 245);
+}
+
+.new{
+    display: flex;
+    justify-content: center;
+}
+
+.errors{
+    background: rgb(248, 145, 145);
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+p{
+    font-size: 15px;
+    color: white;
+}
+
+span{
+    user-select: none;
+    position: absolute;
+    transform: translate(-35px, 10px);
+    cursor: pointer;
+    color: rgb(165, 165, 165);
+    transition: .5s;
+}
+
+@media screen and (max-width: 800px){
+    .login{
+        width: 450px;
+    }
+    [type="text"], [type="email"], [type="password"]{
+        width: 18em;
+    }
+}

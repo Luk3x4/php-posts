@@ -1,0 +1,15 @@
+{
+    "name": "lukas/php-social-media",
+    "autoload": {
+        "psr-4": {
+            "Lukas\\PhpSocialMedia\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "LukaCoder",
+            "email": "lukasenashvili@gmail.com"
+        }
+    ],
+    "require": {}
+}

@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+html, body{
+    background: #323232;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav{
+    color: white;
+    background: #000;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+    box-shadow: 0 0 4px rgb(73, 149, 236);
+    transition: .4s;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+
+.account{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+}
+
+.links span{
+    display: none;
+}
+
+[value="Log Out"]{
+    background: red;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 3px 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: .5s;
+}
+
+[value="Log Out"]:hover{
+    background: white;
+    color: red;
+}
+
+.account span{
+    margin: 5px;
+    font-size: 30px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin: 5px;
+    transition: .5s;
+}
+
+nav a:nth-child(1){
+    border-bottom: 2px solid rgb(0, 133, 51);
+    border-radius: 2px;
+    padding-bottom: 5px;
+}
+
+nav a:hover{
+    color: #cccccc;
+}
+
+nav p{
+    margin-right: 5px;
+}
+
+.addpost{
+    background: rgb(18, 153, 6);
+    border: 0;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 10px;
+    margin-left: 28px;
+    padding: 5px 13px;
+    transition: .5s;
+}
+
+.second{
+    transform: translateY(40px);
+}
+
+.addpost:hover{
+    background: rgb(8, 75, 2);
+}
+
+.upper{
+    display: flex;
+    align-items: center;
+}
+
+.addpost a{
+    color: white;
+    text-decoration: none;
+}
+
+.main-content [type="text"]{
+    height: 30px;
+    width: 600px;
+    margin-left: 200px;
+    outline: none;
+    border-radius: 5px;
+    border: 0;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.main-content [type="submit"]{
+    width: 60px;
+    height: 31px;
+    border: 0;
+    outline: none;
+    transform: translateY(-1px);
+    border-radius: 5px;
+    background: rgb(18, 153, 6);
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.main-content [type="submit"]:hover{
+    background: rgb(8, 75, 2);
+}
+
+.post{
+    background: rgb(26, 26, 26);
+    height: auto;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    margin-top: 15px;
+    box-shadow: 0 0 2px rgb(73, 149, 236);
+}
+
+.post img, p, hr{
+    margin-top: 10px;
+}
+
+.post img{
+    width: 300px;
+    height: 170px;
+    border-radius: 5px;
+}
+
+.links p{
+    margin-top: -1px;
+}
+
+.posts{
+    padding: 25px;
+}
+
+.empty{
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Create Post Page */
+.cont nav a{
+    border: 0;
+}
+
+.cont nav .mid a:nth-child(2){
+    border-bottom: 2px solid rgb(0, 133, 51);
+    border-radius: 2px;
+    padding-bottom: 5px;
+}
+
+.cont form[enctype="multipart/form-data"]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+
+.cont .inner{
+    margin-top: 185px;
+    box-shadow: 0 0 4px rgb(73, 149, 236);
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.cont img{
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
+.cont .inner input{
+    display: block;
+    outline: none;
+    border: 0;
+    margin: 5px;
+    transition: .5s;
+}
+
+.cont .inner [type="text"]{
+    width: 26rem;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 10px;
+    outline: none;
+}
+
+.cont .inner [type="file"]::file-selector-button{
+    font-size: 15px;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    background: white;
+    transition: .5s;
+}
+[type="file"]{
+    color: white;
+}
+
+.cont .inner [type="file"]::file-selector-button:hover{
+    background: rgb(233, 233, 233)
+}
+
+.cont .inner [type="submit"]:hover{
+    background: rgb(8, 75, 2);
+} 
+
+.cont .inner [type="submit"]{
+    font-size: 15px;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    background: rgb(18, 153, 6);
+    color: #fff;
+}
+
+.cont .err{
+    display: flex;
+    justify-content: center;
+}
+
+.cont .errors{
+    background: rgb(248, 145, 145);
+    width: 415px;
+    height: 30px;
+    display: flex;
+    border-radius: 5px;
+    /* align-items: center; */
+    /* transform: translateY(70px); */
+    color: white;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.cont .errors p{
+    transform: translateY(-5px);
+}
+
+/* Media Queries */
+@media screen and (max-width: 800px){
+    .mid{
+        display: none;
+    }
+    [value="Log Out"]{
+        display: none;
+    }
+    .links span{
+        display: inline;
+        cursor: pointer;
+    }
+
+    a{
+        border: 0 !important;
+    }
+
+    .active{
+        height: 160px;
+        align-items: flex-start;
+    }
+
+    nav{
+        align-items: flex-start;
+        overflow: hidden;
+        justify-content: space-between;
+    }
+
+    nav .account{
+        margin-top: 8px;
+    }
+
+    nav span{
+        margin-top: 8px;
+    }
+    nav h2{
+        margin-top: 3px
+    }
+
+    .active{
+        overflow: hidden;
+    }
+    
+    .active .mid{
+        display: block;
+        margin-top: 40px;
+        position: absolute;
+        left: 25px;
+    }
+    
+    .active .mid a{
+        display: block;
+        border: 0;
+        animation: .5s fade;
+    }
+
+    @keyframes fade{
+        0%{
+            opacity: 0;
+        }
+        50%{
+            opacity: 0;
+        }
+
+        100%{
+            opacity: 1;
+        }
+    }
+
+    .active [value="Log Out"]{
+        display: block;
+        position: absolute;
+        left: 24px;
+        top: 110px;
+        /* opacity: 0; */
+        animation: .5s fade;
+    }
+
+    .addpost{
+        font-size: 15px;
+    }
+
+    
+    .main-content [type="text"]{
+        margin-left: 30px;
+        width: 51vw;
+    }
+    .main-content input{
+        transform: translateX(-25px);
+    }
+
+    .main-content input[type="submit"]{
+        transform: translateX(-20px);
+    }
+
+    .post img{
+        width: 100%;
+        height: 110%;
+    }
+}
